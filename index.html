@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Quản lý tuyển sinh  -->
+    <label for="area">Khu vực</label>
+    <select name="Area" id="area">
+      <option value="emt">Chọn khu vực</option>
+      <option value="A" id="area1">A</option>
+      <option value="B" id="area2">B</option>
+      <option value="C" id="area3">C</option>
+    </select>
+    <label for="subject">Đối tượng</label>
+    <select name="subject" id="subject">
+      <option value="emt">chọn đối tượng</option>
+      <option value="1" id="s1">1</option>
+      <option value="2" id="s2">2</option>
+      <option value="3" id="s3">3</option>
+    </select>
+    <input type="text" id="dm1" placeholder="Điểm môn thứ 1" />
+    <input type="text" id="dm2" placeholder="Điểm môn thứ 2" />
+    <input type="text" id="dm3" placeholder="Điểm môn thứ 3" />
+    <input type="text" id="dc" placeholder="Điểm chuẩn" />
+    <button onclick="diem()">Kết quả</button>
+    <p id="kqts"></p>
+
+    <!-- Tính tiền điện -->
+    <input type="text" id="name" placeholder="tên bạn" />
+    <input type="text" id="sKw" placeholder="số điện sử dụng (kW)" />
+    <button onclick="ttd()">tính tiền điện</button>
+    <p id="kqtd"></p>
+
+    <!-- Tính thuế thu nhập cá nhân  -->
+    <input type="text" id="ten" placeholder="họ và tên" />
+    <input type="text" id="ttnn" placeholder="nhập tổng thu nhập năm" />
+    <input type="text" id="snpt" placeholder="số người phụ thuộc" />
+    <button onclick="thue()">Tính Thuế</button>
+    <p id="thue"></p>
+
+    <!-- tính tiền cáp  -->
+    <select id="lkh" onchange="lkh()">
+      <option value="chon">Chọn loại khách hàng</option>
+      <option value="nhadan">Nhà Dân</option>
+      <option value="doanhn">Doanh Nghiệp</option>
+    </select>
+   
+    <input type="text" id="mkh" placeholder="mã khách hàng" />
+    <input type="text" id="skcc" placeholder="số kênh cao cấp" />
+    <input style="opacity: 0;" type="text" id="skn" placeholder="số kết nối" />
+    <button onclick="tiencap()">Tính tiền cáp</button>
+    <p id="tiencap"></p>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

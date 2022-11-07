@@ -121,17 +121,17 @@ function tiencap(){
     var lkh = document.getElementById("lkh").value;
     var mkh = document.getElementById("mkh").value;
     var skcc = document.getElementById("skcc").value*1;
-    var skn = document.getElementById("skn").value;
+    var skn = document.getElementById("skn").value*1;
     
     var nd; 
-    var dn 
+    var dn ;
     nd = 4.5 + 20.5 + 7.5* skcc;
     // dn = 15 + 75*pdv;
-    if(skcc<=10){
-        dn = 15 + 75*skcc;
+    if(skn<=10){
+        dn = 15 + 75*skn + 7.5*skcc;
 
     }else{
-        dn = 15 + (75*10)+5*(skcc-10)
+        dn = 15 + (75*10)+5*(skn-10) +50*skcc;
     }
     document.getElementById("tieccap").innerHTML = nd + dn
 
